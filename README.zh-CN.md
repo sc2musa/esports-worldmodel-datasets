@@ -308,4 +308,8 @@ ModelScope 仓库声明的许可证为 **Apache License 2.0**。这反映仓库�
 }
 ```
 
-这是仓库引用，并非论文引用。数据问题与使用反馈可通过 ModelScope 数据集讨论页提出。
+这是仓库引用，并非论文引用。
+
+## 联系方式
+
+数据集相关问题与使用反馈，请联系 [sc2meisah@gmail.com](mailto:sc2meisah@gmail.com)，也可通过 ModelScope 数据集讨论页提出。

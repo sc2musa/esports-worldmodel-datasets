@@ -308,4 +308,8 @@ If you use the dataset, cite the repository and record the payload subset and re
 }
 ```
 
-This is a repository citation, not a paper citation. Questions and issue reports can be raised through the dataset's ModelScope discussion page.
+This is a repository citation, not a paper citation.
+
+## Contact
+
+For dataset questions and feedback, contact [sc2meisah@gmail.com](mailto:sc2meisah@gmail.com). You can also use the dataset's ModelScope discussion page.
