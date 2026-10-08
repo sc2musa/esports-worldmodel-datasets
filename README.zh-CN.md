@@ -69,7 +69,7 @@ standard/v1.0.0/
 每行一个时间步，主要字段：`step_index`、`game_loop`、`timestamp_s`、`frame_index`、`observation`（镜头、资源、分数、升级、可见单位）、`action`（镜头移动与单位指令）、`is_first/is_last/is_terminal/is_truncated`、`reward_terminal`（胜 +1 / 负 −1）。
 
 - `step[t].action` 是从 `observation[t]` 到 `observation[t+1]` 之间的动作，已对齐，无需再平移。首帧前的动作在 `views.reset_actions` 中。
-- 观测仅包含该玩家可见的信息；实体 tag 不能跨视角匹配；单位/技能 ID 与游戏 build 相关。
+- 观测仅包含该玩家可见的信息；同一局两个视角的实体 tag 一致，可用于跨视角匹配同一单位；单位/技能 ID 与游戏 build 相关。
 - 同一局的两个视角始终在同一 split 中。完整约定见 [STANDARD_RELEASE.md](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/esports_world_model_full_20260901/starcraft2/dataset_prep/STANDARD_RELEASE.md)。
 
 ### Dota 2

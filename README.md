@@ -69,7 +69,7 @@ standard/v1.0.0/
 One row per step. Main fields: `step_index`, `game_loop`, `timestamp_s`, `frame_index`, `observation` (camera, resources, score, upgrades, visible units), `action` (camera moves and unit commands), `is_first/is_last/is_terminal/is_truncated`, `reward_terminal` (win +1 / loss −1).
 
 - `step[t].action` is the action taken between `observation[t]` and `observation[t+1]`. It is already aligned; do not shift it again. Actions before the first frame are in `views.reset_actions`.
-- Observations contain only what that player can see. Entity tags cannot be matched across views. Unit and ability IDs depend on the game build.
+- Observations contain only what that player can see. Entity tags are shared by the two views of a game, so the same unit can be matched across views. Unit and ability IDs depend on the game build.
 - Both views of a game are always in the same split. Full spec: [STANDARD_RELEASE.md](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/esports_world_model_full_20260901/starcraft2/dataset_prep/STANDARD_RELEASE.md).
 
 ### Dota 2
