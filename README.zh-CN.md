@@ -6,7 +6,15 @@ license: cc-by-nc-4.0
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [ModelScope](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets)
 
-> **仅限非商业科研使用。** 本数据集包含由游戏回放渲染得到的画面及游戏数据，相关版权与商标归 Blizzard Entertainment（StarCraft II）和 Valve Corporation（Dota 2、Counter-Strike 2）所有。使用前请阅读文末[许可与版权声明](#许可与版权声明)。
+**作者：** Weiyu Ma, Zeyuan Gong<sup>1</sup>, Xuhui Liu<sup>1</sup>, Wenxuan Zhang<sup>1</sup>, Jian Ding<sup>1</sup>, Xinyu Cui<sup>2</sup>, Mohamed Elhoseiny<sup>1</sup>, Jian Zhao<sup>3,*</sup>
+
+<sup>1</sup>阿卜杜拉国王科技大学（KAUST） &nbsp; <sup>2</sup>中国科学院自动化研究所 &nbsp; <sup>3</sup>北京中关村学院 & 中关村人工智能研究院 &nbsp; <sup>*</sup>通讯作者：[jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn)
+
+[![电子竞技世界模型数据集宣传片（点击播放）](docs/assets/promo_poster.jpg)](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/promo/promo_2160p.mp4)
+
+宣传片（64 秒）：[4K](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/promo/promo_2160p.mp4) · [1080p](docs/assets/promo_1080p.mp4) &nbsp;|&nbsp; 论文：[PDF](paper/Esports_World_Model_Dataset.pdf)
+
+> **仅限学术研究和非商业使用。** 商业使用请联系 [sc2meisah@gmail.com](mailto:sc2meisah@gmail.com)。本数据集包含由游戏回放渲染得到的画面及游戏数据，相关版权与商标归 Blizzard Entertainment（StarCraft II）和 Valve Corporation（Dota 2、Counter-Strike 2）所有。使用前请阅读文末[许可与版权声明](#许可与版权声明)。
 
 本数据集解码真实玩家的比赛回放，提供 **StarCraft II（RTS）、Dota 2（MOBA）和 Counter-Strike 2（FPS）** 的多视角玩家视频，并与游戏动作、引擎状态和事件在时间上对齐。适用于动作条件世界模型、多视角一致性、部分可观测推理和视频理解等研究。
 
@@ -15,15 +23,15 @@ license: cc-by-nc-4.0
 | | StarCraft II | Dota 2 | Counter-Strike 2 |
 |---|---:|---:|---:|
 | 类型 / 对阵 | RTS / 1v1 | MOBA / 5v5 | FPS / 5v5 |
-| 对局数 | 2,145 | 273 | 50 |
-| 比赛时长 | 395.8 h | 195.5 h | 34.8 h |
-| 玩家视角视频时长 | 791.5 h | 1,955.0 h | 138.4 h |
+| 对局数 | 2,320（索引） | 303 | 50 |
+| 比赛时长 | 430.8 h | 282.8 h | 34.8 h |
+| 玩家视角视频时长 | 861.5 h | 2,827.9 h | 138.4 h |
 | 视角 | 每局 2 个 | 每局最多 10 个 | 7,623 个回合级 POV 片段 |
-| 结构化数据 | 约 5,900 万轨迹步 | 约 77 亿条状态变化、2.2 亿条事件 | 64 tick/s 回放与 16 FPS 视频对齐 |
+| 结构化数据 | 约 6,950 万轨迹步 | 约 84 亿条状态变化 | 64 tick/s 回放与 16 FPS 视频对齐 |
 
-合计 2,468 局、626.1 小时比赛、约 2,885 小时玩家视角视频。比赛时长每局只计一次，视角时长对所有视角求和。
+合计 2,673 局/地图、748.4 小时比赛、约 3,828 小时玩家视角视频。比赛时长每局只计一次，视角时长对所有视角求和。
 
-线上版本持续更新，以各子集自带的元数据为准：SC2 标准版 `v1.0.0` 含 2,314 局可训练对局、4,628 个视角（见 [`meta/info.json`](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/esports_world_model_full_20260901/starcraft2/publish/standard/v1.0.0/meta/info.json)）；CS2 训练可用子集含 7,341 个视频/状态配对片段、134.7 小时（见[规模报告](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/esports_world_model_full_20260901/counter_strike2/reports/dataset_scale_summary.md)）。
+线上版本持续更新，以各子集自带的元数据为准：SC2 发布元数据索引 2,320 局，其中标准版 `v1.0.0` 标记 2,314 局为可训练对局，并包含 4,628 个已完成视角（见 [`meta/info.json`](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/esports_world_model_full_20260901/starcraft2/publish/standard/v1.0.0/meta/info.json)）；CS2 训练可用子集含 7,341 个视频/状态配对片段、134.7 小时（见[规模报告](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/esports_world_model_full_20260901/counter_strike2/reports/dataset_scale_summary.md)）。
 
 ### 玩家视角示例
 
@@ -69,7 +77,8 @@ standard/v1.0.0/
 每行一个时间步，主要字段：`step_index`、`game_loop`、`timestamp_s`、`frame_index`、`observation`（镜头、资源、分数、升级、可见单位）、`action`（镜头移动与单位指令）、`is_first/is_last/is_terminal/is_truncated`、`reward_terminal`（胜 +1 / 负 −1）。
 
 - `step[t].action` 是从 `observation[t]` 到 `observation[t+1]` 之间的动作，已对齐，无需再平移。首帧前的动作在 `views.reset_actions` 中。
-- 观测仅包含该玩家可见的信息；同一局两个视角的实体 tag 一致，可用于跨视角匹配同一单位；单位/技能 ID 与游戏 build 相关。
+- “可见”指游戏引擎判定的战争迷雾可见状态，并不表示单位位于当前镜头窗口内。`visible` 敌方单位是当前按引擎规则可观测的单位；`snapshot` 是引擎为曾经见过的敌方建筑保留的记忆记录，只包含最后一次观察到的类型和位置，不代表当前真实状态。
+- 两名玩家同时观测到的活体单位具有共享实体 tag，可用于跨视角匹配；snapshot 不按 tag 进行跨视角连接。单位/技能 ID 与游戏 build 相关。
 - 同一局的两个视角始终在同一 split 中。完整约定见 [STANDARD_RELEASE.md](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/esports_world_model_full_20260901/starcraft2/dataset_prep/STANDARD_RELEASE.md)。
 
 ### Dota 2
@@ -138,7 +147,7 @@ Dota 2 建议先读 `match.json`，CS2 建议先读 `reports/` 下的清单。
 
 ## 许可与版权声明
 
-1. **仅限非商业科研用途。** 本仓库中由我们产出的部分（解码后的结构化数据、对齐表、元数据、脚本与文档）以 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans) 发布。禁止用于任何商业目的，包括但不限于商业产品或服务、商业模型训练、付费分发或转售。
+1. **仅限学术研究和非商业使用。** 本仓库中由我们产出的部分（解码后的结构化数据、对齐表、元数据、脚本与文档）以 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans) 发布。未经事先许可，不得用于任何商业目的，包括但不限于商业产品或服务、商业模型训练、付费分发或转售；商业使用请联系 [sc2meisah@gmail.com](mailto:sc2meisah@gmail.com)。
 2. **游戏内容版权归原权利人。** 视频画面、游戏素材、单位/英雄/地图名称、回放文件及相关商标分别归 Blizzard Entertainment 和 Valve Corporation 所有。本数据集与上述公司无关联，也未获其认可或授权。我们不对上述内容主张任何权利，CC BY-NC 4.0 不覆盖这些内容。
 3. **遵守上游条款。** 使用者须同时遵守各游戏的最终用户许可协议、服务条款以及回放来源（如 Blizzard 回放包许可）的相关规定；若上游条款更严格，以上游条款为准。
 4. **禁止再分发原始游戏内容。** 请勿将视频或回放单独打包公开再分发。论文、报告中少量引用截图或片段用于学术说明的情况除外。
@@ -149,7 +158,7 @@ Dota 2 建议先读 `match.json`，CS2 建议先读 `reports/` 下的清单。
 
 ```bibtex
 @misc{esports_world_model_dataset,
-  author       = {Ma, Weiyu},
+  author       = {Ma, Weiyu and Gong, Zeyuan and Liu, Xuhui and Zhang, Wenxuan and Ding, Jian and Cui, Xinyu and Elhoseiny, Mohamed and Zhao, Jian},
   title        = {Esports World Model Dataset},
   howpublished = {ModelScope dataset repository},
   url          = {https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets},
@@ -159,4 +168,4 @@ Dota 2 建议先读 `match.json`，CS2 建议先读 `reports/` 下的清单。
 
 ## 联系方式
 
-[sc2meisah@gmail.com](mailto:sc2meisah@gmail.com)，或在 ModelScope 数据集讨论区留言。
+Weiyu Ma：[sc2meisah@gmail.com](mailto:sc2meisah@gmail.com)；通讯作者 Jian Zhao：[jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn)；或在 ModelScope 数据集讨论区留言。
