@@ -6,9 +6,9 @@ license: cc-by-nc-4.0
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [ModelScope](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets)
 
-**Authors:** Weiyu Ma, Zeyuan Gong<sup>1</sup>, Xuhui Liu<sup>1</sup>, Wenxuan Zhang<sup>1</sup>, Jian Ding<sup>1</sup>, Xinyu Cui<sup>2</sup>, Mohamed Elhoseiny<sup>1</sup>, Jian Zhao<sup>3,*</sup>
+**Authors:** Weiyu Ma<sup>†</sup>, Zeyuan Gong<sup>1</sup>, Xuhui Liu<sup>1</sup>, Wenxuan Zhang<sup>1</sup>, Jian Ding<sup>1</sup>, Xinyu Cui<sup>2</sup>, Jian Zhao<sup>3,*</sup>, Mohamed Elhoseiny<sup>1,*</sup>
 
-<sup>1</sup>King Abdullah University of Science and Technology (KAUST) &nbsp; <sup>2</sup>Institute of Automation, Chinese Academy of Sciences &nbsp; <sup>3</sup>Beijing Zhongguancun Academy & Zhongguancun Institute of Artificial Intelligence &nbsp; <sup>*</sup>Corresponding author: [jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn)
+<sup>1</sup>King Abdullah University of Science and Technology (KAUST) &nbsp; <sup>2</sup>Institute of Automation, Chinese Academy of Sciences &nbsp; <sup>3</sup>Beijing Zhongguancun Academy & Zhongguancun Institute of Artificial Intelligence &nbsp; <sup>†</sup>Project leader &nbsp; <sup>*</sup>Corresponding authors: Jian Zhao, [jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn); Mohamed Elhoseiny, [mohamed.elhoseiny@kaust.edu.sa](mailto:mohamed.elhoseiny@kaust.edu.sa)
 
 [![Esports World Model Dataset promo video (click to play)](docs/assets/promo_poster.jpg)](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/promo/promo_2160p.mp4)
 
@@ -158,7 +158,7 @@ For Dota 2, start with `match.json`; for CS2, start with the inventories in `rep
 
 ```bibtex
 @misc{esports_world_model_dataset,
-  author       = {Ma, Weiyu and Gong, Zeyuan and Liu, Xuhui and Zhang, Wenxuan and Ding, Jian and Cui, Xinyu and Elhoseiny, Mohamed and Zhao, Jian},
+  author       = {Ma, Weiyu and Gong, Zeyuan and Liu, Xuhui and Zhang, Wenxuan and Ding, Jian and Cui, Xinyu and Zhao, Jian and Elhoseiny, Mohamed},
   title        = {Esports World Model Dataset},
   howpublished = {ModelScope dataset repository},
   url          = {https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets},
@@ -168,4 +168,4 @@ For Dota 2, start with `match.json`; for CS2, start with the inventories in `rep
 
 ## Contact
 
-Weiyu Ma, [sc2meisah@gmail.com](mailto:sc2meisah@gmail.com); corresponding author Jian Zhao, [jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn); or the ModelScope dataset discussion page.
+project leader Weiyu Ma, [sc2meisah@gmail.com](mailto:sc2meisah@gmail.com); corresponding authors Jian Zhao, [jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn), and Mohamed Elhoseiny, [mohamed.elhoseiny@kaust.edu.sa](mailto:mohamed.elhoseiny@kaust.edu.sa); or the ModelScope dataset discussion page.

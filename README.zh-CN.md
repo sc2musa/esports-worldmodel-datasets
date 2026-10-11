@@ -6,9 +6,9 @@ license: cc-by-nc-4.0
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [ModelScope](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets)
 
-**作者：** Weiyu Ma, Zeyuan Gong<sup>1</sup>, Xuhui Liu<sup>1</sup>, Wenxuan Zhang<sup>1</sup>, Jian Ding<sup>1</sup>, Xinyu Cui<sup>2</sup>, Mohamed Elhoseiny<sup>1</sup>, Jian Zhao<sup>3,*</sup>
+**作者：** Weiyu Ma<sup>†</sup>, Zeyuan Gong<sup>1</sup>, Xuhui Liu<sup>1</sup>, Wenxuan Zhang<sup>1</sup>, Jian Ding<sup>1</sup>, Xinyu Cui<sup>2</sup>, Jian Zhao<sup>3,*</sup>, Mohamed Elhoseiny<sup>1,*</sup>
 
-<sup>1</sup>阿卜杜拉国王科技大学（KAUST） &nbsp; <sup>2</sup>中国科学院自动化研究所 &nbsp; <sup>3</sup>北京中关村学院 & 中关村人工智能研究院 &nbsp; <sup>*</sup>通讯作者：[jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn)
+<sup>1</sup>阿卜杜拉国王科技大学（KAUST） &nbsp; <sup>2</sup>中国科学院自动化研究所 &nbsp; <sup>3</sup>北京中关村学院 & 中关村人工智能研究院 &nbsp; <sup>†</sup>项目负责人 &nbsp; <sup>*</sup>通讯作者：Jian Zhao，[jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn)；Mohamed Elhoseiny，[mohamed.elhoseiny@kaust.edu.sa](mailto:mohamed.elhoseiny@kaust.edu.sa)
 
 [![电子竞技世界模型数据集宣传片（点击播放）](docs/assets/promo_poster.jpg)](https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets/resolve/master/promo/promo_2160p.mp4)
 
@@ -158,7 +158,7 @@ Dota 2 建议先读 `match.json`，CS2 建议先读 `reports/` 下的清单。
 
 ```bibtex
 @misc{esports_world_model_dataset,
-  author       = {Ma, Weiyu and Gong, Zeyuan and Liu, Xuhui and Zhang, Wenxuan and Ding, Jian and Cui, Xinyu and Elhoseiny, Mohamed and Zhao, Jian},
+  author       = {Ma, Weiyu and Gong, Zeyuan and Liu, Xuhui and Zhang, Wenxuan and Ding, Jian and Cui, Xinyu and Zhao, Jian and Elhoseiny, Mohamed},
   title        = {Esports World Model Dataset},
   howpublished = {ModelScope dataset repository},
   url          = {https://www.modelscope.cn/datasets/meisah111/Esports_world_model_datasets},
@@ -168,4 +168,4 @@ Dota 2 建议先读 `match.json`，CS2 建议先读 `reports/` 下的清单。
 
 ## 联系方式
 
-Weiyu Ma：[sc2meisah@gmail.com](mailto:sc2meisah@gmail.com)；通讯作者 Jian Zhao：[jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn)；或在 ModelScope 数据集讨论区留言。
+项目负责人 Weiyu Ma：[sc2meisah@gmail.com](mailto:sc2meisah@gmail.com)；通讯作者 Jian Zhao：[jianzhao@zgci.ac.cn](mailto:jianzhao@zgci.ac.cn)，Mohamed Elhoseiny：[mohamed.elhoseiny@kaust.edu.sa](mailto:mohamed.elhoseiny@kaust.edu.sa)；或在 ModelScope 数据集讨论区留言。
